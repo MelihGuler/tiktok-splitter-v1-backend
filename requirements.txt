@@ -1,0 +1,9 @@
+Flask
+browser_cookie3
+bs4
+numpy
+pandas
+requests
+selenium
+streamlit
+marshmallow
