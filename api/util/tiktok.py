@@ -214,7 +214,7 @@ def save_tiktok(video_url, browser_name=None):
         print(e)
         return
     
-    if tt_video.status_code is not 200:
+    if tt_video.status_code != 200:
         return
     
     return tt_video.content
