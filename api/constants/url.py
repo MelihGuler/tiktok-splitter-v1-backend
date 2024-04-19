@@ -1,0 +1,1 @@
+TIKTOK_HOST_NAME = 'www.tiktok.com'
