@@ -8,3 +8,4 @@ selenium
 streamlit
 marshmallow
 python-dotenv
+moviepy
