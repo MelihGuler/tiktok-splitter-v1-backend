@@ -1,10 +1,10 @@
 
-import api.util.tiktok as tiktok
-from api.constants.tiktok import BROWSER_NAME
-from flask import Response
 from http import HTTPStatus
-from api.constants.errors import VIDEO_COULDNT_FETCH
+from flask import Response
+import api.util.tiktok as tiktok
 from api.util.split import split_video
+from api.constants.errors import VIDEO_COULDNT_FETCH
+from api.constants.tiktok import BROWSER_NAME
 
 class VideoService:
     def get(self, video_url):
@@ -26,5 +26,4 @@ class VideoService:
         
         else:
             parts = split_video(video, part_length)
-            print(parts)
             return parts
