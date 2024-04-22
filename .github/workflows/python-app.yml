@@ -30,8 +30,8 @@ jobs:
         sudo snap install firefox
         sudo apt-get install -qqy x11-apps
         DISPLAY=:0
-        sudo firefox -CreateProfile "New";
-        sudo firefox -P New about:profiles
+        firefox -CreateProfile "New";
+        firefox -P New about:profiles
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
@@ -43,4 +43,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        sudo pytest
+        pytest
