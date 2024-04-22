@@ -28,6 +28,8 @@ jobs:
         sudo apt update
         sudo apt install snapd
         sudo snap install firefox
+        sudo add-apt-repository ppa:chris-lea/munin-plugins
+        sudo apt-get update && sudo apt-get install munin-memcached
         sudo apt-get install -qqy x11-apps x11vnc xvfb xhost
         export X11Forwarding=yes
         export DISPLAY=:0.0
