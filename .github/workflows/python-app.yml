@@ -29,7 +29,8 @@ jobs:
         sudo apt install snapd
         sudo snap install firefox
         sudo apt-get install -qqy x11-apps x11vnc xvfb
-        export X11Forwarding yes
+        export X11Forwarding=yes
+        export DISPLAY=0
         echo "exec firefox" > ~/.xinitrc && chmod +x ~/.xinitrc
         firefox -CreateProfile "New";
         firefox -P New about:profiles
