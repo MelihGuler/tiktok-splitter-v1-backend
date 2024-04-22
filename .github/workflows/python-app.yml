@@ -28,9 +28,9 @@ jobs:
         sudo apt update
         sudo apt install snapd
         sudo snap install firefox
-        DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix
-        firefox -P
-        firefox -CreateProfile profile_name
+        DISPLAY=:0
+        firefox -CreateProfile "New";
+        firefox -P New about:profiles
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
