@@ -29,7 +29,7 @@ jobs:
         sudo apt install snapd
         sudo snap install firefox
         sudo apt-get install -qqy x11-apps
-        DISPLAY=:0
+        export DISPLAY=0
         firefox -CreateProfile "New";
         firefox -P New about:profiles
         python -m pip install --upgrade pip
