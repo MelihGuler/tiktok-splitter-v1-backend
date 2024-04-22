@@ -28,8 +28,8 @@ jobs:
         sudo apt update
         sudo apt install snapd
         sudo snap install firefox
-        sudo apt-get install -qqy x11-apps x11vnc xvfb xorg
-        startx
+        sudo apt-get install -qqy x11-apps x11vnc xvfb xorg xorg-server
+        sudo startx
         python -m pip install --upgrade pip
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
