@@ -31,7 +31,7 @@ jobs:
         sudo apt-get install -qqy x11-apps x11vnc xvfb
         export X11Forwarding yes
         echo "exec firefox" > ~/.xinitrc && chmod +x ~/.xinitrc
-        v11vnc -create -forever
+        x11vnc -create -forever
         firefox -CreateProfile "New";
         firefox -P New about:profiles
         python -m pip install --upgrade pip
