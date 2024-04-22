@@ -9,3 +9,4 @@ streamlit
 marshmallow
 python-dotenv
 moviepy
+waitress
